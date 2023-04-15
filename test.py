@@ -1,6 +1,5 @@
-chara_type = ["Human", "Erune", "Draph", "Harvin", "Primal", "Other"]
-skill_type = ["omega_atk", "omega_enm", "omega_stm", "omega_vrt", "omega_ex", "opt_atk", "opt_enm", "opt_stm",
-              "opt_ex", "unk"]
+aura_type = ["Omega", "Optimus", "Optimus_unaura"]
+skill_type = ["Verity", "Might", "Enmity", "Stamina", "Aegies", "Dual", "Trium"]
 class skill():
     def __init__(self, name:str, category, limit:int, aura:bool):
         self.name = name
