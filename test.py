@@ -8,7 +8,7 @@ skill_type = ["方陣_攻刃", "方陣_背水", "方陣_渾身", "方陣_技巧"
             "unk",
             "ex_攻撃", "ex_渾身", "ex_背水", "ex_奥義", "ex_属性", "ex_アビ上限", "ex_通常上限", "ex_奥義上限", 
             "通常_アビ与ダメ", "通常_通常与ダメ", "通常_奥義与ダメ",
-            "ex_アビ与ダメ", "ex_奥義与ダメ"]
+            "ex_アビ与ダメ", "ex_奥義よダメ"]
 
 class skill():
     def __init__(self, name:str, category, limit:int, aura:bool):
