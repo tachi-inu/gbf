@@ -1,10 +1,11 @@
 import numpy as np
 import pandas as pd
-
+from enum import Enum
 #武器・スキル・キャラ名の中黒(・)は省略する
 
-chara_type = ["ヒューマン", "エルーン", "ドラフ", "ハーヴィン", "星晶獣", "不明"]
-elements = ["火", "水", "土", "風", "光", "闇"]
+chara_type = Enum("種族",["ヒューマン", "エルーン", "ドラフ", "ハーヴィン", "星晶獣", "不明"])
+elements = Enum("属性", ["火", "水", "土", "風", "光", "闇"])
+
 
 skill_type = ["方陣_攻刃", "方陣_背水", "方陣_渾身", "方陣_技巧", "方陣_奥義", "方陣_属性", "方陣_奥義上限", 
             "通常_攻刃", "通常_背水", "通常_渾身","通常_技巧", "通常_奥義", "通常_属性", "通常_奥義上限",
@@ -31,7 +32,7 @@ class skill():
         self.df = pd.DataFrame(np.zeros(aura_num*effect_num).reshape(aura_num, effect_num),
                 columns=effect_type,
                 index=aura_type)
-        
+
         for skill_tuple in effect.keys():
             self.aura = skill_tuple[0]
             self.effect = skill_tuple[1]
@@ -41,6 +42,10 @@ class skill():
 
 class skill_if(skill):
     skill.__init__
+    if (skill_num>=15):
+        --
+
+
 
 
 class weapon():
