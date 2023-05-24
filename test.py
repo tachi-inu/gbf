@@ -26,7 +26,7 @@ aura_num = len(aura_type)
 effect_num = len(effect_type)
 
 class skill():
-    def __init__(self, expl:str, effect:dict, aura=True):    #("説明文", {("方陣","攻刃"):24})
+    def __init__(self, expl:str, strict, effect:dict, aura=True):    #("説明文", {("方陣","攻刃"):24})
         self.expl = expl
 
         self.df = pd.DataFrame(np.zeros(aura_num*effect_num).reshape(aura_num, effect_num),
